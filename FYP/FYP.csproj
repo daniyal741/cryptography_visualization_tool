@@ -1,0 +1,604 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F9E5231-4019-41E4-86CE-E985B9D6F26F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FYP</RootNamespace>
+    <AssemblyName>FYP</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.0.6, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Advance.cs" />
+    <Compile Include="Model\AES.cs" />
+    <Compile Include="Model\Classical.cs" />
+    <Compile Include="Model\Hashing.cs" />
+    <Compile Include="Model\KeyBased.cs" />
+    <Compile Include="Model\NonKeyBased.cs" />
+    <Compile Include="Model\SecurityAlgorithm.cs" />
+    <Compile Include="Model\Sha512.cs" />
+    <Compile Include="Model\Symmetric.cs" />
+    <Compile Include="Views\AES_Algorithm\AES_VISUALIZATION_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\AES_VISUALIZATION_1.Designer.cs">
+      <DependentUpon>AES_VISUALIZATION_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\AES_Viualization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\AES_Viualization.Designer.cs">
+      <DependentUpon>AES_Viualization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\plian_tex_Informaion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\plian_tex_Informaion.Designer.cs">
+      <DependentUpon>plian_tex_Informaion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\preRound_information.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\preRound_information.Designer.cs">
+      <DependentUpon>preRound_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\Round_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AES_Algorithm\Round_1.Designer.cs">
+      <DependentUpon>Round_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AsymmetricAlgoCategories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\AsymmetricAlgoCategories.Designer.cs">
+      <DependentUpon>AsymmetricAlgoCategories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CaesarCipherView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CaesarCipherView.Designer.cs">
+      <DependentUpon>CaesarCipherView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CategoriesOfCaeserCipher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CategoriesOfCaeserCipher.Designer.cs">
+      <DependentUpon>CategoriesOfCaeserCipher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%281%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%281%29.Designer.cs">
+      <DependentUpon>DeffieHellmanVisualization%281%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%282%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%282%29.Designer.cs">
+      <DependentUpon>DeffieHellmanVisualization%282%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%284%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%284%29.Designer.cs">
+      <DependentUpon>DeffieHellmanVisualization%284%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%286%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DeffieHellmanVisualization%286%29.Designer.cs">
+      <DependentUpon>DeffieHellmanVisualization%286%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Deffie_HellmanVisualization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Deffie_HellmanVisualization.Designer.cs">
+      <DependentUpon>Deffie_HellmanVisualization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoAdditiveCaesarCipher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoAdditiveCaesarCipher.Designer.cs">
+      <DependentUpon>DemoAdditiveCaesarCipher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controller\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\CategoriesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CategoriesView.Designer.cs">
+      <DependentUpon>CategoriesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoAdditiveCaesarCipherDecrypt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoAdditiveCaesarCipherDecrypt.Designer.cs">
+      <DependentUpon>DemoAdditiveCaesarCipherDecrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_1.Designer.cs">
+      <DependentUpon>DemoDES_View_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_2.Designer.cs">
+      <DependentUpon>DemoDES_View_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_3.Designer.cs">
+      <DependentUpon>DemoDES_View_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoDES_View_4.Designer.cs">
+      <DependentUpon>DemoDES_View_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoHMAC_View_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoHMAC_View_1.Designer.cs">
+      <DependentUpon>DemoHMAC_View_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoHMAC_View_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoHMAC_View_2.Designer.cs">
+      <DependentUpon>DemoHMAC_View_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_1.Designer.cs">
+      <DependentUpon>DemoMD5_View_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_2.Designer.cs">
+      <DependentUpon>DemoMD5_View_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_3.Designer.cs">
+      <DependentUpon>DemoMD5_View_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoMD5_View_4.Designer.cs">
+      <DependentUpon>DemoMD5_View_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoMultiplicativeCaesarDecrypt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoMultiplicativeCaesarDecrypt.Designer.cs">
+      <DependentUpon>DemoMultiplicativeCaesarDecrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoMultiplicativeCeaserCipher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoMultiplicativeCeaserCipher.Designer.cs">
+      <DependentUpon>DemoMultiplicativeCeaserCipher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoOneTimePad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoOneTimePad.Designer.cs">
+      <DependentUpon>DemoOneTimePad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoOneTimePadDecrypt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoOneTimePadDecrypt.Designer.cs">
+      <DependentUpon>DemoOneTimePadDecrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoRSA%281%29.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoRSA%281%29.Designer.cs">
+      <DependentUpon>DemoRSA%281%29.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoRSA.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoRSA.Designer.cs">
+      <DependentUpon>DemoRSA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_1.Designer.cs">
+      <DependentUpon>DemoSha512_View_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_2.Designer.cs">
+      <DependentUpon>DemoSha512_View_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_3.Designer.cs">
+      <DependentUpon>DemoSha512_View_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoSha512_View_4.Designer.cs">
+      <DependentUpon>DemoSha512_View_4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoVigenereCipher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoVigenereCipher.Designer.cs">
+      <DependentUpon>DemoVigenereCipher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DemoVigenereCipherDecrypt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DemoVigenereCipherDecrypt.Designer.cs">
+      <DependentUpon>DemoVigenereCipherDecrypt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DES_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DES_View.Designer.cs">
+      <DependentUpon>DES_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DisplayPicture.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DisplayPicture.Designer.cs">
+      <DependentUpon>DisplayPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HashingCategoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HashingCategoryView.designer.cs">
+      <DependentUpon>HashingCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HMAC_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\HMAC_View.Designer.cs">
+      <DependentUpon>HMAC_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManInTheMiddleAttack2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ManInTheMiddleAttack2.Designer.cs">
+      <DependentUpon>ManInTheMiddleAttack2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ManInTheMiddleAttack1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ManInTheMiddleAttack1.Designer.cs">
+      <DependentUpon>ManInTheMiddleAttack1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MD5_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MD5_View.designer.cs">
+      <DependentUpon>MD5_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\multiplicativeCeaserCipherView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\multiplicativeCeaserCipherView.Designer.cs">
+      <DependentUpon>multiplicativeCeaserCipherView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OneTimePadView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OneTimePadView.Designer.cs">
+      <DependentUpon>OneTimePadView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Sha512_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Sha512_View.Designer.cs">
+      <DependentUpon>Sha512_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SymmetricCategoryView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\SymmetricCategoryView.Designer.cs">
+      <DependentUpon>SymmetricCategoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SymmetricEncryptions.cs" />
+    <Compile Include="Views\SyncRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\TripleDesView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\TripleDesView.Designer.cs">
+      <DependentUpon>TripleDesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VigenereCipher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\VigenereCipher.Designer.cs">
+      <DependentUpon>VigenereCipher.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AES_Algorithm\AES_VISUALIZATION_1.resx">
+      <DependentUpon>AES_VISUALIZATION_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AES_Algorithm\AES_Viualization.resx">
+      <DependentUpon>AES_Viualization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AES_Algorithm\plian_tex_Informaion.resx">
+      <DependentUpon>plian_tex_Informaion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AES_Algorithm\preRound_information.resx">
+      <DependentUpon>preRound_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AES_Algorithm\Round_1.resx">
+      <DependentUpon>Round_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AsymmetricAlgoCategories.resx">
+      <DependentUpon>AsymmetricAlgoCategories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CaesarCipherView.resx">
+      <DependentUpon>CaesarCipherView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CategoriesOfCaeserCipher.resx">
+      <DependentUpon>CategoriesOfCaeserCipher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeffieHellmanVisualization%281%29.resx">
+      <DependentUpon>DeffieHellmanVisualization%281%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeffieHellmanVisualization%282%29.resx">
+      <DependentUpon>DeffieHellmanVisualization%282%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeffieHellmanVisualization%284%29.resx">
+      <DependentUpon>DeffieHellmanVisualization%284%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DeffieHellmanVisualization%286%29.resx">
+      <DependentUpon>DeffieHellmanVisualization%286%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Deffie_HellmanVisualization.resx">
+      <DependentUpon>Deffie_HellmanVisualization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoAdditiveCaesarCipher.resx">
+      <DependentUpon>DemoAdditiveCaesarCipher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controller\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Views\CategoriesView.resx">
+      <DependentUpon>CategoriesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoAdditiveCaesarCipherDecrypt.resx">
+      <DependentUpon>DemoAdditiveCaesarCipherDecrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoDES_View_1.resx">
+      <DependentUpon>DemoDES_View_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoDES_View_2.resx">
+      <DependentUpon>DemoDES_View_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoDES_View_3.resx">
+      <DependentUpon>DemoDES_View_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoDES_View_4.resx">
+      <DependentUpon>DemoDES_View_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoHMAC_View_1.resx">
+      <DependentUpon>DemoHMAC_View_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoHMAC_View_2.resx">
+      <DependentUpon>DemoHMAC_View_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoMD5_View_1.resx">
+      <DependentUpon>DemoMD5_View_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoMD5_View_2.resx">
+      <DependentUpon>DemoMD5_View_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoMD5_View_3.resx">
+      <DependentUpon>DemoMD5_View_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoMD5_View_4.resx">
+      <DependentUpon>DemoMD5_View_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoMultiplicativeCaesarDecrypt.resx">
+      <DependentUpon>DemoMultiplicativeCaesarDecrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoMultiplicativeCeaserCipher.resx">
+      <DependentUpon>DemoMultiplicativeCeaserCipher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoOneTimePad.resx">
+      <DependentUpon>DemoOneTimePad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoOneTimePadDecrypt.resx">
+      <DependentUpon>DemoOneTimePadDecrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoRSA%281%29.resx">
+      <DependentUpon>DemoRSA%281%29.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoRSA.resx">
+      <DependentUpon>DemoRSA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoSha512_View_1.resx">
+      <DependentUpon>DemoSha512_View_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoSha512_View_2.resx">
+      <DependentUpon>DemoSha512_View_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoSha512_View_3.resx">
+      <DependentUpon>DemoSha512_View_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoSha512_View_4.resx">
+      <DependentUpon>DemoSha512_View_4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoVigenereCipher.resx">
+      <DependentUpon>DemoVigenereCipher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DemoVigenereCipherDecrypt.resx">
+      <DependentUpon>DemoVigenereCipherDecrypt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DES_View.resx">
+      <DependentUpon>DES_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DisplayPicture.resx">
+      <DependentUpon>DisplayPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HashingCategoryView.resx">
+      <DependentUpon>HashingCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\HMAC_View.resx">
+      <DependentUpon>HMAC_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManInTheMiddleAttack2.resx">
+      <DependentUpon>ManInTheMiddleAttack2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ManInTheMiddleAttack1.resx">
+      <DependentUpon>ManInTheMiddleAttack1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MD5_View.resx">
+      <DependentUpon>MD5_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\multiplicativeCeaserCipherView.resx">
+      <DependentUpon>multiplicativeCeaserCipherView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OneTimePadView.resx">
+      <DependentUpon>OneTimePadView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Sha512_View.resx">
+      <DependentUpon>Sha512_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\SymmetricCategoryView.resx">
+      <DependentUpon>SymmetricCategoryView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TripleDesView.resx">
+      <DependentUpon>TripleDesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\VigenereCipher.resx">
+      <DependentUpon>VigenereCipher.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Guna.UI2.dll" />
+    <None Include="images\xor.png" />
+    <None Include="images\images.png" />
+    <None Include="images\Hashing\Md5.jpg" />
+    <None Include="images\Hashing\md5_2.png" />
+    <None Include="images\Hashing\HMAC.png" />
+    <None Include="images\fast-forward.png" />
+    <None Include="images\rotate_right_inverse.png" />
+    <None Include="images\rotate_left_inverse.png" />
+    <None Include="images\rotate_left.png" />
+    <None Include="images\rotate_right.png" />
+    <None Include="images\Hashing\HSHA-2.png" />
+    <None Include="images\Hashing\bits-1024.png" />
+    <None Include="Resources\rotate_down.png" />
+    <None Include="Resources\rotate_down_inverse.png" />
+    <None Include="Resources\des.png" />
+    <None Include="images\vigenere.jpg" />
+    <None Include="images\Hashing\up-arrow.png" />
+    <None Include="images\Hashing\left-arrow.png" />
+    <None Include="images\Hashing\plus-sign-inside-a-box%28512px%29.png" />
+    <None Include="images\Hashing\plus-sign-inside-a-box%2832%29.png" />
+    <None Include="images\Hashing\plus.png" />
+    <None Include="images\Hashing\line-vert.jpg" />
+    <None Include="images\Hashing\line.png" />
+    <None Include="images\Hashing\diagonal-line.png" />
+    <None Include="images\Hashing\anti-diagonal-line.png" />
+    <None Include="images\Hashing\right-arrow.png" />
+    <None Include="images\Hashing\HMD5.png" />
+    <None Include="images\Hashing\down-arrow.png" />
+    <None Include="images\Hashing\block512.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
